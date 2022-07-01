@@ -1,0 +1,86 @@
+[
+  {
+    "id": "7ab1bc6a-2bde-4dcd-b4b8-c10ce4beded6",
+    "deliveryAddress": "Pza prova",
+    "receiver": "Pierluca P.",
+    "fragile": "Yes",
+    "price": 804,
+    "status": "Delivery Completed and Signed",
+    "date": "Fri Jul 01 2022"
+  },
+  {
+    "id": "3ad6cac9-7e29-4e60-a32f-1f4f361cca8f",
+    "deliveryAddress": "Pza prova",
+    "receiver": "Pierluca P.",
+    "fragile": "Yes",
+    "price": 504,
+    "status": "Shipping Ticket Created"
+  },
+  {
+    "id": "79a53498-25bf-4720-9d83-d397fc3d23a0",
+    "deliveryAddress": "via davinci",
+    "receiver": "Jeff",
+    "price": 115.5,
+    "status": "Package Picked up by Shipping Company"
+  },
+  {
+    "id": "c319cf72-725e-4daf-bf49-406a425552e1",
+    "deliveryAddress": "via davinci",
+    "receiver": "Jeff",
+    "price": 60,
+    "status": "Package Picked up by Shipping Company"
+  },
+  {
+    "id": "ed9e2bdd-a361-4b87-98af-810beec79ae8",
+    "deliveryAddress": "Via Prova 100, Milano",
+    "receiver": "Ospedale GG",
+    "price": 746.25,
+    "status": "Delivery Completed and Signed"
+  },
+  {
+    "id": "a40dd65c-d632-4985-97af-5f80d639b711",
+    "deliveryAddress": "via davinci",
+    "receiver": "Ospedale GG",
+    "price": 656.25,
+    "status": "Delivery Completed and Signed",
+    "date": "Fri Jul 01 2022"
+  },
+  {
+    "id": "6d1625d0-eff4-4da4-93e7-ac4b4848d3a3",
+    "deliveryAddress": "Via Prova 100, Milano",
+    "receiver": "Jeff",
+    "price": 241.50000000000003,
+    "status": "Package Picked up by Shipping Company"
+  },
+  {
+    "id": "d538efd0-c63f-48e2-af3e-d44747730c51",
+    "deliveryAddress": "via davinci",
+    "receiver": "Ospedale GG",
+    "price": 88.5,
+    "status": "Package Picked up by Shipping Company"
+  },
+  {
+    "id": "950acb29-45bb-4eb3-be5b-8612504aaff8",
+    "deliveryAddress": "via davinci",
+    "receiver": "Ospedale GG",
+    "price": 148.5,
+    "status": "Delivery Completed and Signed",
+    "date": "Fri Jul 01 2022"
+  },
+  {
+    "id": "0814bbe8-7063-464e-a15e-e790d6fbdd79",
+    "deliveryAddress": "via davinci",
+    "receiver": "Ospedale GG",
+    "price": 461.25,
+    "status": "Delivery Completed and Signed",
+    "date": "Fri Jul 01 2022"
+  },
+  {
+    "id": "89c9e572-e8a9-4003-8300-9b73752ac957",
+    "deliveryAddress": "via davinci",
+    "receiver": "Ospedale GG",
+    "price": 229.5,
+    "status": "Delivery Completed and Signed",
+    "date": "Fri Jul 01 2022"
+  }
+]

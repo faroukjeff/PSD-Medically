@@ -1,0 +1,22 @@
+{
+  "001": {
+    "partName": "B355 Board",
+    "availability": 156,
+    "price": 50
+  },
+  "002": {
+    "partName": "B350 HV",
+    "availability": 167,
+    "price": 179
+  },
+  "003": {
+    "partName": "IPS 200T",
+    "availability": 5,
+    "price": 25
+  },
+  "004": {
+    "partName": "Medic 66BX",
+    "availability": 10,
+    "price": 65
+  }
+}
