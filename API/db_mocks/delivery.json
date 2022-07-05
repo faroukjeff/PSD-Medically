@@ -82,5 +82,12 @@
     "price": 229.5,
     "status": "Delivery Completed and Signed",
     "date": "Fri Jul 01 2022"
+  },
+  {
+    "id": "6c5a8df8-3d71-4176-922d-666c5fac91a7",
+    "deliveryAddress": "test",
+    "receiver": "test",
+    "price": 178.5,
+    "status": "Shipping Ticket Created"
   }
 ]

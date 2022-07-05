@@ -10,11 +10,6 @@ const fs = require('fs');
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: true }));
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
-
-
 //Delivery
 function updateStatus(data,path){
     const json = JSON.stringify(data,null,2);
@@ -163,6 +158,12 @@ app.post("/partsService", async function (req, res) {
     res.json(resjson)
 })
 
+
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+// let express to use this
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(port, function () {
     console.log('Running on port: ' + port);

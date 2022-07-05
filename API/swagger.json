@@ -1,0 +1,209 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Medically 3rd party services",
+        "version": "1.0.0",
+        "title": "Medically External REST API",
+        "contact": {
+            "email": "Medically-serivce@medically.com"
+        }
+    },
+    "schemes": ["http"],
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths" : {
+        "/delivery" : {
+            "get" : {
+                "summary" : "Creates shipping ticket",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "deliveryAddress",
+                        "in": "query",
+                        "description": "Address of customer",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pickupAddress",
+                        "in": "query",
+                        "description": "Address of Warehouse",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "weight",
+                        "in": "query",
+                        "description": "Weight in KGs",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "receiver",
+                        "in": "query",
+                        "description": "Receiver name for signing",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content":"application/json",
+                        "schema": {
+                            "type": "object",
+                            "properties":{
+                                "id":{"type":"string","format":"uuid"},
+                                "deliveryAddress":{"type":"string"},
+                                "receiver":{"type":"string"},
+                                "price" : {"type":"integer"},
+                                "status" : {"type":"string"}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/delivery-pickup" : {
+            "get" : {
+                "summary" : "Schedule pickup at warehouse",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Shipping ID",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content":"application/json",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id":{"type":"string","format":"uuid"},
+                                "deliveryDate":{"type":"string","format":"date"}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/delivery-status" : {
+            "get" : {
+                "summary" : "Shows the status of the delivery",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Shipping ID",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content":"application/json",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id":{"type":"string","format":"uuid"},
+                                "status":{"type":"string"}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/certifications" : {
+            "get" : {
+                "summary" : "Validate the machine conformity",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "typeofMachine",
+                        "in": "query",
+                        "description": "type of machine",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "location",
+                        "in": "query",
+                        "description": "Destination location",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "headtechnician",
+                        "in": "query",
+                        "description": "Technician information",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content":"application/json",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id":{"type":"string","format":"uuid"},
+                                "typeofMachine":{"type":"string"},
+                                "location":{"type":"string"},
+                                "headtechnician":{"type":"string"},
+                                "result":{"type":"string"}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/partsService" : {
+            "post" : {
+                "summary" : "Request parts to the supplier",
+                "produces": ["application/json"],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "Parts",
+                        "description": "Request parts to 3rd party supplier",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id" : {
+                                    "type": "object",
+                                    "properties": {
+                                        "qte":{"type":"integer"}
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content":"application/json",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status":{"type":"string"},
+                                "price":{"type":"integer"},
+                                "date":{"type":"string","format":"date"}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
